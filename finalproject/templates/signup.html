@@ -1,0 +1,34 @@
+{%extends 'layout.html'%}
+{%block body%}
+<div class="bodyBack">
+<h3 id="about"><a href="{{ url_for('about') }}">About</a></h3>
+<img id="AnimationImgSignUp" src="{{url_for('static', filename='images/PageTitle.png')}}">
+<form  class="logNsign" action="{{url_for('signUp')}}" style="padding-top:20px;" method="POST">
+  <div class="mb-3">
+    <label for="FirstName" class="form-label">First Name</label>
+    <input type="text" class="form-control"  name ="Fname" maxlength="20" pattern="^[a-zA-Z]+" title="Only alphabetic characters." required>
+  </div>
+  <div class="mb-3">
+    <label for="LastName" class="form-label">Last Name</label>
+    <input type="text" class="form-control"  name="Lname" maxlength="20" pattern="^[a-zA-Z]+" title="Only alphabetic characters." required>
+  </div>
+  <div class="mb-3">
+    <label for="UserName" class="form-label">Username</label>
+    <input type="text" class="form-control" name="Uname" maxlength="15" minlength="6" pattern='[a-zA-Z][a-zA-Z0-9-_.]{1,20}' required>
+  </div>
+  <div class="mb-3">
+    <label for="Password" class="form-label">Password</label>
+    <input type="password" class="form-control" name="Pword" maxlength="15" minlength="6" pattern="[A-Za-z0-9]+" title="Please include at least 1 uppercase character, 1 lowercase character, and 1 number." required>
+  </div>
+  <div class="mb-3">
+    <label for="Confpass" class="form-label">*Confirm Password</label>
+    <input type="password" class="form-control" name="Cpass" required>
+  </div>
+  <div class="text-center">
+      <button type="submit" class="btn btn-primary">Sign Up</button>
+  </div>
+  <a class="backButton" href="{{ url_for('landingPage') }}" class="link-secondary">Go Back</a>
+  </form>
+</div>
+
+{%endblock%}

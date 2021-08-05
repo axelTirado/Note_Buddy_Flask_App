@@ -1,0 +1,29 @@
+{% extends 'layout.html' %}
+{% block body %}
+<h1 class = "text-center createTitle" >New Note</h1>
+<form id="newNote" class="createTitle" action="{{url_for('new')}}" method="POST">
+    <div class="container">
+        <div class=" flex-child left">
+            <div class="form-floating mb-3 createTitleInput">
+                <input type="text" class="form-control" id="floatingInput" name="Ntitle" required>
+                <label for="floatingInput"> Note Title</label>
+            </div>
+            <div class="card createAuthor">
+              <div class="card-body">
+                <p class="text-center createAuthorText"> Author: {{ firstname }} {{ lastname }}<p>
+              </div>
+            </div>
+            <div class="createCheck">
+                <input type="checkbox" id="favorites" name=checkFav>
+                <label for="favorites">Add to favorites</label>
+            </div>
+            <div class="createButton ">
+                <input type="submit" id="Submit" class="btn btn-primary" value="Create New" name=btnCreateNew>
+            </div>
+        </div>
+        <div class="flex-child right">
+            <textarea class="notebox" placeholder="Write text here..." name="Ncontent" required></textarea>
+        </div>
+    </div>
+</form>
+{% endblock %}

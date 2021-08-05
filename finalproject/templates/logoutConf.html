@@ -1,0 +1,12 @@
+{% extends 'layout.html' %}
+{% block body %}
+<form action="{{ url_for('logout') }}" method='POST'>
+    {%if message%}
+    <h1 class ='text-center mt-5'> {{ message }} </h1>
+    {%endif%}
+    <div class="confirm">
+        <input type="submit" value='Continue' name=btnConfirm>
+        <input class="input2" type="submit" value='Cancel' name=btnCancel>
+    </div>
+</form>
+{% endblock %}

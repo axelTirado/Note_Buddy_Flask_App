@@ -1,0 +1,23 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+    {% if not count_fav %}
+        <h5 class="text-center mt-5"> No notes marked as favorites. </h5>
+    {% else %}
+        {% for i in note %}
+            {% if i.favorites == 1 %}
+            <div class="card cardNote">
+                <div class="card-header">
+                    <p id ="author">By: {{ f_name }} {{ l_name }}</p>
+                    <img src="{{url_for('static', filename='images/favoriteStar.png')}}" style="margin-left:34%;">
+                    <p id="date"> {{ i.date }}</p>
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title text-center">{{ i.title }}</h5>
+                    <p class="card-text text-center">{{ i.context }}</p>
+                </div>
+            </div>
+            {% endif %}
+        {% endfor %}
+    {% endif %}
+{% endblock %}

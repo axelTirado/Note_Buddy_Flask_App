@@ -1,0 +1,13 @@
+
+       {% extends 'layout.html' %}
+       {% block body %}
+       <div class="bodyBack">
+        <h3 id="about"><a class="animated fadeInUp" href="{{ url_for('about') }}">About</a></h3>
+        <img id="AnimationImg" class="animated fadeInUp" src="{{url_for('static', filename='images/PageTitle.png')}}">
+        <div class='credentials'>
+            <h1><a href="{{ url_for('login') }}" id="Log" class="animated fadeInUp">Login</a></h1>
+            <h1><a href="{{ url_for('signUp') }}" id="Sign" class="animated fadeInUp">Sign Up</a></h1>
+        </div>
+       </div>
+
+        {% endblock %}

@@ -1,0 +1,26 @@
+{% extends 'layout.html' %}
+{% block body %}
+    {% if not note %}
+        <h5 class="text-center mt-5"> No notes posted yet.</h5>
+    {% else %}
+        {% for i in note %}
+        <form action = "{{ url_for('viewNote')}}" method="POST">
+            <div class="card cardNote">
+                <div class="card-header">
+                    <p id ="author">By: {{ Fname }} {{ Lname }}</p>
+                    <a href="{{ url_for('editPost', note_id = i.id) }}">Edit</a>
+                    <a href="{{ url_for('delete_confirm', note_id = i.id)}}">Delete</a>
+                    {% if i.favorites == 1 %}
+                    <img src="{{url_for('static', filename='images/favoriteStar.png')}}">
+                    {% endif %}
+                    <p id="date"> {{ i.date }}</p>
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title text-center" name="title" value="{{ i.title }}">{{ i.title }}</h5>
+                    <p class="card-text text-center">{{ i.context }}</p>
+                </div>
+            </div>
+        </form>
+        {% endfor %}
+    {% endif %}
+{% endblock %}

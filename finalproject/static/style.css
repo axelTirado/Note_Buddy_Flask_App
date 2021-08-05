@@ -1,0 +1,214 @@
+#AnimationImg {
+
+	position: relative;
+    padding-left: 29%;
+    padding-top: 7%
+}
+#AnimationImgSignUp{
+    position: relative;
+    padding-left: 29%;
+}
+
+.animated {
+	-webkit-animation-duration: 1s;
+	animation-duration: 1s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+	-webkit-animation-timing-function: ease-in;
+	animation-timing-function: ease-in;
+}
+
+@-webkit-keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fadeInUp {
+    -webkit-animation-name: fadeInUp;
+    animation-name: fadeInUp;
+}
+
+a{
+    text-decoration: none;
+    color:black;
+
+
+}
+#Log{
+    padding-left: 500px;
+}
+
+
+
+#Sign{
+    padding-left: 300px;
+}
+#about{
+    text-align: right;
+    padding-right: 5%;
+    padding-top:2%;
+}
+
+
+.credentials{
+    display:inline-flex;
+
+    margin-top:50px;
+
+}
+
+.bodyBack{
+    background-image: url("/static/images/notebookWP.jpg");
+    background-size: cover;
+}
+
+#logout{
+    text-align:right;
+}
+
+
+nav a {
+    font-size: 20px;
+}
+
+.navbar{
+    background-color:transparent;
+}
+
+.notebox{
+    width: 800px;
+    height: 560px;
+}
+
+.container{
+    display:flex;
+}
+
+.flex-child {
+    flex: 1;
+}
+
+.flex-child:first-child {
+    margin-right: 20px;
+}
+
+.card{
+    margin-left: 25%;
+    margin-top: 3%;
+}
+
+#date{
+    float:right;
+}
+
+#author{
+    float:left;
+    width: 120px;
+}
+
+#AboutBod {
+ background-image: url("/static/images/AboutBack.jpg");
+}
+
+
+#aboutCreator{
+ height: 300px;
+ width: 500px;
+ margin-left: 35%;
+}
+
+.cardLine{
+    max-width: 18rem;
+}
+
+.dashTitle{
+    margin-left: 1%;
+    margin-top:3%;
+}
+
+.notebookImg{
+    margin-left: 35%;
+}
+
+.createTitle{
+    margin-top:1%;
+}
+
+.createTitleInput{
+    width: 500px;
+    margin-bottom: 50%;
+}
+
+.createAuthor{
+    width:100%; margin: auto; margin-top:25%; background-color: gray;
+}
+
+.createAuthorText{
+    font-size: 20px;
+    color: white;
+}
+.createCheck{
+    margin-top:20%;
+}
+
+.createCheck input{
+    width: 20px;
+    height: 20px;
+    margin-left: 125px;
+}
+.createCheck label{
+    font-size:20px;
+}
+.createButton{
+    margin-left:150px;
+    margin-top:20%;
+}
+
+.cardNote{
+    width: 50rem;
+}
+
+.cardNote a{
+    margin-left: 15px;
+}
+.cardNote img {
+    width:40px;
+    height:40px;
+    margin-left:19%;
+}
+
+.backButton{
+    margin-left:40%;
+    margin-top:24px;
+}
+.logNsign{
+    width:300px;
+    margin:auto;
+}
+
+.confirm{
+    display:inline-flex;
+    margin-top:50px;
+    margin-left: 31%;
+
+}
+.confirm input{
+    margin-left: 100%;
+}

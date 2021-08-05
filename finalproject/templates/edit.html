@@ -1,0 +1,36 @@
+{% extends 'layout.html' %}
+{% block body %}
+
+    <h1 class = "text-center" style="margin-top:1%;">Edit Note</h1>
+    {% for i in note %}
+    <form id="editNote" style="margin-top:1%;" action="{{url_for('editPost', note_id=i.id)}}" method="POST">
+        <div class="container">
+            <div class=" flex-child left">
+                <div class="form-floating mb-3 createTitleInput">
+                    <input type="text" class="form-control" id="floatingInput" name=edTitle value="{{ i.title }}" required>
+                    <label for="floatingInput"> Note Title</label>
+                </div>
+               <div class="card createAuthor">
+                  <div class="card-body">
+                    <p class="text-center createAuthorText"> Author: {{ Fname }} {{ Lname }}<p>
+                  </div>
+                </div>
+                <div class ="createCheck">
+                    {% if i.favorites == 1 %}
+                    <input type="checkbox" id="favorites" name=checkEdFav checked>
+                    {% else %}
+                    <input type="checkbox" id="favorites" name=checkEdFav>
+                    {% endif %}
+                    <label for="favorites">Add to favorites</label>
+                </div>
+                <div class="createButton">
+                    <input type="submit" class="btn btn-primary" value="Edit Note" >
+                </div>
+            </div>
+            <div class="flex-child right">
+                <textarea class="notebox" name="edContent" required> {{ i.context }} </textarea>
+            </div>
+        </div>
+    </form>
+    {% endfor %}
+{% endblock %}
